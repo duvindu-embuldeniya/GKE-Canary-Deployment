@@ -1,9 +1,5 @@
 namespace: dev
 
-image:
-  repository: duvindune/repo1
-  tag: v1
-
 app:
   name: django
   port: 8000
@@ -16,10 +12,16 @@ service:
 stable:
   name: django-stable
   replicas: 5
+  image:
+    repository: duvindune/repo1
+    tag: v1
 
 canary:
   name: django-canary
   replicas: 0
+  image:
+    repository: duvindune/repo1
+    tag: v1
 
 resources:
   requests:

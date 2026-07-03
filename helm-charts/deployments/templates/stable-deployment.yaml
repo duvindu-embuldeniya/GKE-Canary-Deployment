@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: django-container
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.stable.image.repository }}:{{ .Values.stable.image.tag }}"
           ports:
             - containerPort: {{ .Values.app.port }}
           resources:
