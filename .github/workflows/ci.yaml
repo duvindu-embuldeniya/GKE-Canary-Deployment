@@ -43,7 +43,6 @@
 #         run: |
 #           docker push $APP_IMAGE:$IMAGE_TAG
 
-
 name: CI - Build and Push Image
 on:
   workflow_dispatch:
@@ -80,7 +79,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
-          docker build -t $APP_IMAGE:$IMAGE_TAG .
+          docker build -t $APP_IMAGE:$IMAGE_TAG ./demo-application
 
       - name: Push Docker Image
         run: |
