@@ -5,3 +5,5 @@ terraform/.terraform/
 terraform/.terraform.lock.hcl
 terraform/key.json
 terraform/*.tfvars
+terraform/*.tfstate
+terraform/*.tfstate.*

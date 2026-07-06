@@ -1,9 +1,5 @@
 terraform {
-  backend "gcs" {
-    bucket      = "duvindu-test-bucket-3"
-    prefix      = "terraform/state"
-    credentials = "key.json"
-  }
+  backend "local" {}
   required_providers {
     google = {
       source  = "hashicorp/google"
@@ -13,6 +9,5 @@ terraform {
 }
 
 provider "google" {
-  project     = var.project_id
-  credentials = "key.json"
+  project = var.project_id
 }
